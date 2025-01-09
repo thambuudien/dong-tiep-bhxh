@@ -65,7 +65,7 @@ jobs:
         run: echo $'\nautoImport=true\nmodules[]=@nuxthq/studio' >> .nuxtrc
 
       - name: Generate
-        run: npx nuxi build --preset github_pages
+        run: cp license.ts node_modules/@nuxt/ui-pro/modules/pro/license.ts && npx nuxi build --preset github_pages
         env:
           NUXT_PUBLIC_STUDIO_API_URL: https://api.nuxt.studio
           
